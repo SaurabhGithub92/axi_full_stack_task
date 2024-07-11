@@ -1,6 +1,56 @@
-.TimeContainer {
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.ToggleButton{
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.ToggleButton.red{
+  background-color: red;
+}
+
+.ToggleButton.blue{
+  background-color: blue;
+}
+
+.ToggleButton.green{
+  background-color: green;
+}
+
+.TimeContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .TimeItem {
   border: 1px solid #000;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: 10px;
+  width: calc(33.33% -20px);
+}
+
+/*Responsive styles for TimeItem*/
+@media (max-width: 600px){
+  .TimeItem{
+    width: 100%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 601px){
+  .TimeItem{
+    width: calc(33.33% -20px);
+    margin-bottom: 10px;
+  }
 }
