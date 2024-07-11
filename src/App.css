@@ -6,11 +6,21 @@
   height: 100vh;
 }
 
+.ButtonContainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
 .ToggleButton{
   margin-bottom: 20px;
   padding: 10px 20px;
   border: 1px solid;
+  color: white;
   cursor: pointer;
+  margin: 10px;
+  width: calc(33.33% -20px);
 }
 
 .ToggleButton.red{
@@ -23,6 +33,10 @@
 
 .ToggleButton.green{
   background-color: green;
+}
+
+.ToggleButton.active {
+  opacity: 0.7;
 }
 
 .TimeContainer{
@@ -40,11 +54,18 @@
   width: calc(33.33% -20px);
 }
 
+.TimeItem.active {
+  background-color: lightgrey;
+}
+
 /*Responsive styles for TimeItem*/
 @media (max-width: 600px){
   .TimeItem{
     width: 100%;
     margin-bottom: 10px;
+  }
+  .ToggleButton{
+    width: 100%;
   }
 }
 
@@ -52,5 +73,8 @@
   .TimeItem{
     width: calc(33.33% -20px);
     margin-bottom: 10px;
+  }
+  .ToggleButton{
+    width: calc(33.33% -20px);
   }
 }
